@@ -25,9 +25,11 @@ class deleteViewController: UIViewController {
 
     @IBAction func delet(sender: AnyObject) {
         delete()
+        UIAlertView(title:"Notice",message:"You message is delete",delegate: nil,cancelButtonTitle: "ok").show()//title标题message信息delegate自身为空cancelButtonTitle关闭按钮show显示对话框
     }
     @IBAction func deletem(sender: AnyObject) {
         deletem()
+        UIAlertView(title:"Notice",message:"You message is delete",delegate: nil,cancelButtonTitle: "ok").show()
     }
     func delete(){
         let a=searchtext.text!

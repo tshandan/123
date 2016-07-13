@@ -11,6 +11,7 @@ import UIKit
 class showViewController: UIViewController {
     var db:SQLiteDB!
     
+    @IBOutlet weak var kanname: UITextField!
     @IBOutlet weak var kan: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,27 @@ class showViewController: UIViewController {
             
         }
         
+    }
+    
+    @IBAction func showname(sender: AnyObject) {
+        showname()
+    }
+    func showname(){
+        let c=kanname.text!
+        
+        let sql = db.query("select * from tuser where name='\(c)'")
+        
+        for var y=0;y<sql.count;y++
+        {
+            let suser=sql[y]
+ 
+            kan?.text! += "姓名：" + String(suser["name"]!) + " 电话：" + String(suser["mobile"]!)  + " email：" + String(suser["email"]!) +  " 地址：" + String(suser["address"]!) + "\n"
+            
+        }
+       
+    }
+    @IBAction func clear(sender: AnyObject) {
+        kan.text!=""
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

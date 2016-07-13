@@ -17,8 +17,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var address: UITextField!
     
     @IBAction func save(sender: AnyObject) {
-        saveUser()
+        if (name.text==""||phone.text=="")
+        {
+            UIAlertView(title:"Notice",message:"Message is empty",delegate: nil,cancelButtonTitle: "Agreen").show()//title标题message信息delegate自身为空cancelButtonTitle关闭按钮show显示对话框
+            
+        }else
+        {
+            saveUser()
+        }
+        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
