@@ -19,6 +19,7 @@
 		5850450A1D2CA47900D2C3A2 /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585045071D2CA47900D2C3A2 /* SQLTable.swift */; };
 		5850450B1D2CA47900D2C3A2 /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585045081D2CA47900D2C3A2 /* String-Extras.swift */; };
 		585045121D2CA65300D2C3A2 /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 585045111D2CA65300D2C3A2 /* data.db */; };
+		5859779E1D38AB5E00F07124 /* updatabyname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859779D1D38AB5E00F07124 /* updatabyname.swift */; };
 		58BA038B1D2F2745009C6175 /* showViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA038A1D2F2745009C6175 /* showViewController.swift */; };
 		58BA038D1D2F3F22009C6175 /* deleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BA038C1D2F3F22009C6175 /* deleteViewController.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		585045081D2CA47900D2C3A2 /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
 		5850450C1D2CA48200D2C3A2 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		585045111D2CA65300D2C3A2 /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.db; sourceTree = "<group>"; };
+		5859779D1D38AB5E00F07124 /* updatabyname.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = updatabyname.swift; sourceTree = "<group>"; };
 		58BA038A1D2F2745009C6175 /* showViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showViewController.swift; sourceTree = "<group>"; };
 		58BA038C1D2F3F22009C6175 /* deleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = deleteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 				5850450C1D2CA48200D2C3A2 /* Header.h */,
 				58BA038A1D2F2745009C6175 /* showViewController.swift */,
 				58BA038C1D2F3F22009C6175 /* deleteViewController.swift */,
+				5859779D1D38AB5E00F07124 /* updatabyname.swift */,
 			);
 			path = 123;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5859779E1D38AB5E00F07124 /* updatabyname.swift in Sources */,
 				5850450B1D2CA47900D2C3A2 /* String-Extras.swift in Sources */,
 				58BA038D1D2F3F22009C6175 /* deleteViewController.swift in Sources */,
 				58BA038B1D2F2745009C6175 /* showViewController.swift in Sources */,
@@ -443,7 +447,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "txl.-23";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/20141105041/Desktop/123/123/Header.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/20141105041/Desktop/1231/123/Header.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -455,7 +460,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "txl.-23";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/20141105041/Desktop/123/123/Header.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/20141105041/Desktop/1231/123/Header.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
 		};

@@ -5,6 +5,66 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Updatabyname-->
+        <scene sceneID="uco-v0-M0R">
+            <objects>
+                <viewController id="BdB-DA-s23" customClass="updatabyname" customModule="_23" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zAY-0f-TFk"/>
+                        <viewControllerLayoutGuide type="bottom" id="uFh-x2-dsh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nYm-3N-Ct0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wb1-O4-Tbe">
+                                <rect key="frame" x="36" y="60" width="255" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ie-Tk-rau">
+                                <rect key="frame" x="36" y="165" width="255" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="查询联系人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-bM-XaN">
+                                <rect key="frame" x="94" y="110" width="133" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="请添加新的电话号码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeR-y7-q6v">
+                                <rect key="frame" x="83" y="218" width="155" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfV-DK-bZe">
+                                <rect key="frame" x="137" y="285" width="46" height="30"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="updatesave:" destination="BdB-DA-s23" eventType="touchUpInside" id="t85-n8-VN2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pm-Wr-xy2">
+                                <rect key="frame" x="245" y="391" width="46" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <segue destination="99Z-Ye-giT" kind="modal" id="Cye-bj-uzz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="updatename" destination="Wb1-O4-Tbe" id="Svz-JZ-efv"/>
+                        <outlet property="updatenum" destination="3Ie-Tk-rau" id="Egi-Z4-4kC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sO3-2z-2fO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="-731"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="wZw-KZ-V2a">
             <objects>
@@ -36,6 +96,13 @@
                                 <state key="normal" title="删除联系人"/>
                                 <connections>
                                     <segue destination="gE8-cg-IxY" kind="modal" id="uT2-4f-YLo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oC-tI-nG3">
+                                <rect key="frame" x="67" y="263" width="161" height="29"/>
+                                <state key="normal" title="修改联系人"/>
+                                <connections>
+                                    <segue destination="BdB-DA-s23" kind="modal" id="gf1-UP-oKf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -248,6 +315,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FrU-xq-Xxl"/>
+        <segue reference="Cye-bj-uzz"/>
     </inferredMetricsTieBreakers>
 </document>
